@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yazılımcı Sevgilim Var</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .heart-container {
+            width: 300px;
+            height: 220px;
+            transform: scale(0);
+            animation: pop 1s ease-out forwards;
+        }
+
+        .heart-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: 1.2s;
+            text-align: center;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            opacity: 0.4;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heart-container">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff4d4d;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff1a1a;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path
+                d="M471.7,73.3c-54.5-46.4-136-38.7-186.4,13.7L256,116.6l-29.3-29.6c-50.3-52.4-131.9-60.1-186.4-13.7
+        c-62,52.9-66.2,149.8-9.9,207.6l193.5,199.8c12,12.4,31.4,12.4,43.4,0l193.5-199.8C537.9,223.1,533.7,126.2,471.7,73.3z"
+                fill="url(#grad)" stroke="white" stroke-width="5" />
+        </svg>
+    </div>
+
+    <div class="message">Seni Çooookk Seviyorumm</div>
+    <div class="footer">Kodlayan: Sevgilin 💻</div>
+
+</body>
+
+</html>
